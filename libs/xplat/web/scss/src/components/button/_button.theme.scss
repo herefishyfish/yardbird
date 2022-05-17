@@ -1,0 +1,13 @@
+@mixin button-theme() {
+  [ybButton] {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+
+    transition: 125ms ease-in-out;
+    transition-property: background-color, color, border-color;
+
+    &.appearance-outline {
+      border-width: 1px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use '../../theming' as *;
+
+@mixin button-outline() {
+  @each $status in get-statuses() {
+    [ybButton].appearance-outline {
+      border-style: solid;
+      &.status-#{$status} {
+        border-color: theme(button-outline-#{$status}-border-color);
+        background-color: theme(button-outline-#{$status}-background-color);
+        color: theme(button-outline-#{$status}-text-color);
+
+        &:hover {
+          border-color: theme(button-outline-#{$status}-hovered-border-color);
+          background-color: theme(button-outline-#{$status}-hovered-background-color);
+          color: theme(button-outline-#{$status}-hovered-text-color);
+        }
+        &:focus {
+          border-color: theme(button-outline-#{$status}-focused-border-color);
+          background-color: theme(button-outline-#{$status}-focused-background-color);
+          color: theme(button-outline-#{$status}-focused-text-color);
+        }
+        &:active {
+          border-color: theme(button-outline-#{$status}-active-border-color);
+          background-color: theme(button-outline-#{$status}-active-background-color);
+          color: theme(button-outline-#{$status}-active-text-color);
+        }
+      }
+    }
+  }
+}

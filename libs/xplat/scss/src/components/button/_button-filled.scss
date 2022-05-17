@@ -1,0 +1,25 @@
+@use '../../theming' as *;
+
+@mixin button-filled() {
+  @each $status in get-statuses() {
+    [ybButton].appearance-filled {
+      &.status-#{$status} {
+        background-color: theme(button-#{$status}-background-color);
+        color: theme(button-#{$status}-text-color);
+
+        &:hover {
+          background-color: theme(button-#{$status}-hovered-background-color);
+          color: theme(button-#{$status}-hovered-text-color);
+        }
+        &:focus {
+          background-color: theme(button-#{$status}-focused-background-color);
+          color: theme(button-#{$status}-focused-text-color);
+        }
+        &:active {
+          background-color: theme(button-#{$status}-active-background-color);
+          color: theme(button-#{$status}-active-text-color);
+        }
+      }
+    }
+  }
+}

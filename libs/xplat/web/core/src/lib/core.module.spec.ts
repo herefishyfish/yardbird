@@ -5,11 +5,11 @@ describe('Core module generic test', () => {
 });
 
 /*
-import { AdvCoreModule } from './core.module';
+import { YardbirdCoreModule } from './core.module';
 
-describe('AdvCoreModule', () => {
+describe('YardbirdCoreModule', () => {
   it('should work', () => {
-    expect(new AdvCoreModule(null)).toBeDefined();
+    expect(new YardbirdCoreModule(null)).toBeDefined();
   });
 });
 */

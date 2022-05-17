@@ -1,1 +1,1 @@
-export { AdvCoreModule } from './core.module';
+export { YardbirdCoreModule } from './core.module';

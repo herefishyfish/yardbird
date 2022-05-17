@@ -1,12 +1,13 @@
-@use '../../theming' as *;
+@use './button-filled' as button-filled;
+@use './button-outline' as button-outline;
 
 @mixin button-theme() {
-  button {
-    @each $status in get-statuses() {
-      &.status-#{$status} {
-        background-color: theme(button-#{$status}-background-color);
-        color: theme(button-#{$status}-text-color);
-      }
-    }
+  [ybButton] {
+    outline: 0;
+    border: 0;
+    font-weight: 600;
   }
+
+  @include button-filled.button-filled;
+  @include button-outline.button-outline;
 }

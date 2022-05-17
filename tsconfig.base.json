@@ -29,6 +29,15 @@
       "@yardbird/xplat/nativescript/utils": [
         "libs/xplat/nativescript/utils/src/index.ts"
       ],
+      "@yardbird/xplat/web/core": [
+        "libs/xplat/web/core/src/index.ts"
+      ],
+      "@yardbird/xplat/web/features": [
+        "libs/xplat/web/features/src/index.ts"
+      ],
+      "@yardbird/xplat/web/utils": [
+        "libs/xplat/web/utils/src/index.ts"
+      ],
       "@yardbird/xplat/utils": ["libs/xplat/utils/src/index.ts"]
     }
   },

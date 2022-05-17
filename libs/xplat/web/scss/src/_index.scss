@@ -1,6 +1,8 @@
+@use 'components/components' as components;
 // shared across all platforms and apps
 @import '@yardbird/xplat-scss/index';
 
+@include components.theme-components();
 /**
  * The following are web specific (used with any web app targets)
  */

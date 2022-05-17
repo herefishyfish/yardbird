@@ -50,12 +50,12 @@ export function createTranslateLoader(http: HttpClient) {
     }),
   ],
 })
-export class AdvCoreModule {
+export class YardbirdCoreModule {
   constructor(
     @Optional()
     @SkipSelf()
-    parentModule: AdvCoreModule
+    parentModule: YardbirdCoreModule
   ) {
-    throwIfAlreadyLoaded(parentModule, 'AdvCoreModule');
+    throwIfAlreadyLoaded(parentModule, 'YardbirdCoreModule');
   }
 }

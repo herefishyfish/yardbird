@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@angular/animations": "^13.0.0",
+    "@angular/cdk": "^13.3.7",
     "@angular/common": "^13.0.0",
     "@angular/compiler": "^13.0.0",
     "@angular/core": "^13.0.0",
@@ -67,7 +68,9 @@
     "@nativescript/firebase-firestore": "^1.2.2",
     "@nativescript/firebase-storage": "^1.2.2",
     "@ngx-translate/core": "~14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "@yardbird/xplat-scss": "file:libs/xplat/scss/src",
+    "@yardbird/xplat-web-scss": "file:libs/xplat/web/scss/src",
     "nativescript-ngx-fonticon": "~7.0.0",
     "nativescript-theme-core": "^1.0.4",
     "rxjs": "^7.4.0",
