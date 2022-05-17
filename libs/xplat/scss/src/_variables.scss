@@ -1,14 +1,68 @@
+$colors: (
+  neutral: (
+    100: #FFFFFF,
+    200: #F8F8F7,
+    300: #F1F1EF,
+    400: #DADAD7,
+    500: #BABAB5,
+    600: #6D6D64,
+    700: #4A4A45,
+    800: #2E2E29,
+    900: #000000,
+  ),
+  primary: (
+    100: #EFB8D0,
+    200: #e59393,
+    300: #9E5C60,
+  ),
+  accent: (
+    100: #69807D,
+    200: #19323c,
+    300: #0E242A,
+  ),
+  tertiary: (
+    100: #C4FFCA,
+    200: #a5ffd6,
+    300: #638f6d,
+  ),
+  focus: (
+    100: #01BAEF,
+    200: #008EAA,
+    300: #005154,
+  ),
+  danger: (
+    100: #B80C09,
+    200: #860000,
+    300: #490000,
+  ),
+  warning: (
+    100: #E9B44C,
+    200: #A67528,
+    300: #54380F,
+  ),
+);
+
+@function color($key, $intensity: 200) {
+  $value: map.get(map.get($colors, $key), $intensity);
+
+  @if ($value == null) {
+    @warn 'color() cannot find value for key ' + $key + ':' + $intensity;
+  }
+
+  @return $value;
+}
+
 $variables: (
-  button-error-background-color: #cecece,
-  button-error-text-color: #791414,
-  button-warning-background-color: #797214,
-  button-warning-text-color: #4d4d4d,
-  button-info-background-color: #141e79,
-  button-info-text-color: #646464,
-  button-success-background-color: #347914,
-  button-success-text-color: #ececec,
-  button-disabled-background-color: #adadad,
-  button-disabled-text-color: #ececec,
-  button-focus-background-color: #d39d0b,
-  button-focus-text-color: #d2d3d2,
+  button-error-background-color: color(danger),
+  button-error-text-color: color(neutral, 100),
+  button-warning-background-color: color(warning),
+  button-warning-text-color: color(neutral, 100),
+  button-info-background-color: color(accent),
+  button-info-text-color: color(neutral, 100),
+  button-success-background-color: color(tertiary, 300),
+  button-success-text-color: color(neutral, 100),
+  button-disabled-background-color: color(neutral, 500),
+  button-disabled-text-color: color(neutral, 100),
+  button-focus-background-color: color(focus),
+  button-focus-text-color: color(neutral, 100),
 );
