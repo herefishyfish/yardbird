@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use 'variables';
+
+@function get-statuses() {
+  @return 'error', 'warning', 'info', 'success', 'disabled', 'focus';
+}
+
+@function theme($key) {
+  $value: map.get(variables.$variables, $key);
+
+  @if ($value == null) {
+    @warn 'theme() cannot find value for key ' + $key;
+  }
+
+  @return $value;
+}

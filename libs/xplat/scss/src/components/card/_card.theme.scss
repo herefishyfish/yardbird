@@ -1,0 +1,7 @@
+@use '../../theming' as *;
+
+@mixin card-theme() {
+  [yrdCard] {
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+  }
+}
