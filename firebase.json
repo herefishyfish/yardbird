@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\apps\\web-yardbird",
+    "public": "dist/apps/web-yardbird",
     "ignore": [
       "firebase.json",
       "**/.*",
