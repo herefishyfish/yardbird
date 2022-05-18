@@ -21,6 +21,7 @@ Authentication will be handled by firebase
     - displayName: User name
     - email
     - photoURL: url of photo
+    - measurement: 'imperial' | 'metric'
 
 
 ### Messages
