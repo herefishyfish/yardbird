@@ -1,24 +1,24 @@
 {
   "projectType": "application",
-  "root": "apps/yardbird-web",
-  "sourceRoot": "apps/yardbird-web/src",
+  "root": "apps/web-yardbird",
+  "sourceRoot": "apps/web-yardbird/src",
   "prefix": "yardbird",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/yardbird-web",
-        "index": "apps/yardbird-web/src/index.html",
-        "main": "apps/yardbird-web/src/main.ts",
-        "polyfills": "apps/yardbird-web/src/polyfills.ts",
-        "tsConfig": "apps/yardbird-web/tsconfig.app.json",
+        "outputPath": "dist/apps/web-yardbird",
+        "index": "apps/web-yardbird/src/index.html",
+        "main": "apps/web-yardbird/src/main.ts",
+        "polyfills": "apps/web-yardbird/src/polyfills.ts",
+        "tsConfig": "apps/web-yardbird/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/yardbird-web/src/favicon.ico",
-          "apps/yardbird-web/src/assets"
+          "apps/web-yardbird/src/favicon.ico",
+          "apps/web-yardbird/src/assets"
         ],
-        "styles": ["apps/yardbird-web/src/styles.scss"],
+        "styles": ["apps/web-yardbird/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -37,8 +37,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/yardbird-web/src/environments/environment.ts",
-              "with": "apps/yardbird-web/src/environments/environment.prod.ts"
+              "replace": "apps/web-yardbird/src/environments/environment.ts",
+              "with": "apps/web-yardbird/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "yardbird-web:build:production"
+          "browserTarget": "web-yardbird:build:production"
         },
         "development": {
-          "browserTarget": "yardbird-web:build:development"
+          "browserTarget": "web-yardbird:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,23 +69,23 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "yardbird-web:build"
+        "browserTarget": "web-yardbird:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/yardbird-web/src/**/*.ts",
-          "apps/yardbird-web/src/**/*.html"
+          "apps/web-yardbird/src/**/*.ts",
+          "apps/web-yardbird/src/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/yardbird-web"],
+      "outputs": ["coverage/apps/web-yardbird"],
       "options": {
-        "jestConfig": "apps/yardbird-web/jest.config.js",
+        "jestConfig": "apps/web-yardbird/jest.config.js",
         "passWithNoTests": true
       }
     }

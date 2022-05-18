@@ -1,0 +1,28 @@
+{
+  "root": "apps/web-yardbird-e2e",
+  "sourceRoot": "apps/web-yardbird-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/web-yardbird-e2e/cypress.json",
+        "devServerTarget": "web-yardbird:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "web-yardbird:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/web-yardbird-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["web-yardbird"]
+}

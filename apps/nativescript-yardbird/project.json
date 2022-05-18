@@ -1,7 +1,7 @@
 {
   "projectType": "application",
-  "root": "apps/yardbird-nativescript/",
-  "sourceRoot": "apps/yardbird-nativescript/src",
+  "root": "apps/nativescript-yardbird/",
+  "sourceRoot": "apps/nativescript-yardbird/src",
   "prefix": "yardbird",
   "targets": {
     "build": {
@@ -62,18 +62,18 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/yardbird-nativescript/**/*.ts",
-          "apps/yardbird-nativescript/src/**/*.html"
+          "apps/nativescript-yardbird/**/*.ts",
+          "apps/nativescript-yardbird/src/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "apps/yardbird-nativescript/jest.config.js",
-        "tsConfig": "apps/yardbird-nativescript/tsconfig.spec.json",
+        "jestConfig": "apps/nativescript-yardbird/jest.config.js",
+        "tsConfig": "apps/nativescript-yardbird/tsconfig.spec.json",
         "passWithNoTests": true,
-        "setupFile": "apps/yardbird-nativescript/src/test-setup.ts"
+        "setupFile": "apps/nativescript-yardbird/src/test-setup.ts"
       }
     }
   }

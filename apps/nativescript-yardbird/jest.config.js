@@ -11,7 +11,7 @@ module.exports = {
       ],
     },
   },
-  coverageDirectory: '../../coverage/apps/yardbird-nativescript',
+  coverageDirectory: '../../coverage/apps/nativescript-yardbird',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'yardbird-web',
+  displayName: 'web-yardbird',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/yardbird-web',
+  coverageDirectory: '../../coverage/apps/web-yardbird',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

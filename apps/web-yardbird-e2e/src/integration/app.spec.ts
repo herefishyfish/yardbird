@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('yardbird-web', () => {
+describe('web-yardbird', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {
@@ -8,6 +8,6 @@ describe('yardbird-web', () => {
     cy.login('my-email@something.com', 'myPassword');
 
     // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome yardbird-web');
+    getGreeting().contains('Welcome web-yardbird');
   });
 });

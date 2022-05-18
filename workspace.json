@@ -1,9 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "yardbird-nativescript": "apps/yardbird-nativescript",
-    "yardbird-web": "apps/yardbird-web",
-    "yardbird-web-e2e": "apps/yardbird-web-e2e",
+    "nativescript-yardbird": "apps/nativescript-yardbird",
+    "web-yardbird": "apps/web-yardbird",
+    "web-yardbird-e2e": "apps/web-yardbird-e2e",
     "xplat-core": "libs/xplat/core",
     "xplat-features": "libs/xplat/features",
     "xplat-nativescript-core": "libs/xplat/nativescript/core",
