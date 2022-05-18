@@ -9,7 +9,7 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "parserOptions": {
-        "project": ["apps/nativescript-client/tsconfig.*?.json"]
+        "project": ["apps/yardbird-nativescript/tsconfig.*?.json"]
       },
       "rules": {
         "@angular-eslint/directive-selector": [
