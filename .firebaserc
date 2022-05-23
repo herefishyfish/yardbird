@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "yardbird-application"
+  },
+  "targets": {
+    "yardbird-application": {
+      "hosting": {
+        "web-yardbird": [
+          "yardbird-application"
+        ]
+      }
+    }
   }
 }

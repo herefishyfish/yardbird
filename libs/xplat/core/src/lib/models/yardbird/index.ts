@@ -1,9 +1,12 @@
+import { GeoPoint } from "@angular/fire/firestore";
+import { GeoPoint as NGeoPoint } from "@nativescript/firebase-firestore";
+
 export interface IYardBirdBaseItem {
   id: string;
   name: string;
   value: number;
   description: string;
-  location: any;
+  location: GeoPoint | NGeoPoint;
   condition: 'new' | 'used';
   category: string;
   images: string[];

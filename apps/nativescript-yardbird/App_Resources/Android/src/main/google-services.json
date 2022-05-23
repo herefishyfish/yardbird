@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "964082585160",
+    "project_id": "yardbird-application",
+    "storage_bucket": "yardbird-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964082585160:android:2e20fa77d45787452e127d",
+        "android_client_info": {
+          "package_name": "app.yardbird.nativescript"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964082585160-phgef4nksrvv86vsq87gacc1nsm738l4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvijiOvK1FCB1V1_WzQVoW9nTcxP-MP5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964082585160-phgef4nksrvv86vsq87gacc1nsm738l4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

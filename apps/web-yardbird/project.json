@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/web-yardbird",
         "index": "apps/web-yardbird/src/index.html",
@@ -18,7 +20,9 @@
           "apps/web-yardbird/src/favicon.ico",
           "apps/web-yardbird/src/assets"
         ],
-        "styles": ["apps/web-yardbird/src/styles.scss"],
+        "styles": [
+          "apps/web-yardbird/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -83,10 +87,22 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/web-yardbird"],
+      "outputs": [
+        "coverage/apps/web-yardbird"
+      ],
       "options": {
         "jestConfig": "apps/web-yardbird/jest.config.js",
         "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {
+        "prerender": false,
+        "ssr": false,
+        "browserTarget": "web-yardbird:build:production",
+        "firebaseProject": "yardbird-application",
+        "firebaseHostingSite": "yardbird-application"
       }
     }
   },
