@@ -19,8 +19,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'item/:id',
+    loadChildren: () =>
+      import('@yardbird/xplat/nativescript/features').then((m) => m.ItemModule),
+  }
 ];
-
 @NgModule({
   imports: [SharedModule, NativeScriptRouterModule.forRoot(routes)],
 })

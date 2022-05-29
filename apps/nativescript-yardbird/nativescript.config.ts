@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.client',
+  id: 'app.yardbird.nativescript',
   appResourcesPath: 'App_Resources',
   android: {
     v8Flags: '--expose_gc',

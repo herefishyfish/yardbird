@@ -1,0 +1,17 @@
+<StackLayout yrdCard>
+  <ng-container *rxLet="item$ as item; rxError: error; rxSuspense: suspense">
+    <StackLayout>
+      <Label class="text-bold" text=" {{ item.name }}"></Label>
+      <Label text="${{ item.value }}"></Label>
+    </StackLayout>
+    <Label text="{{ item.description }}"></Label>
+    <button ybButton nsRouterLink="../1234" text="Go to item 1234"></button>
+  </ng-container>
+</StackLayout>
+
+<ng-template #error>
+  <Label text="Could not find item, this item may have been deleted."></Label>
+</ng-template>
+<ng-template #suspense>
+  <Label text="Loading..."></Label>
+</ng-template>

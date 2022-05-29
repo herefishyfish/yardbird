@@ -11,9 +11,10 @@
 
 android {
   defaultConfig {
-    minSdkVersion 17
-    targetSdkVersion 29
+    minSdkVersion 21
+    targetSdkVersion 32
     generatedDensities = []
+    multiDexEnabled true
   }
   aaptOptions {
     additionalParameters "--no-version-vectors"
