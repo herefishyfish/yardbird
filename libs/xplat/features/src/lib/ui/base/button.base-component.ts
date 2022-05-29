@@ -66,5 +66,5 @@ export abstract class ButtonBaseComponent extends BaseComponent {
   }
 
   @Input()
-  appearance: 'filled' | 'outline' = 'outline';
+  appearance: 'filled' | 'outline' = 'filled';
 }
