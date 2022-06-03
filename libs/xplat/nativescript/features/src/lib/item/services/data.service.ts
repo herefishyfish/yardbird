@@ -18,11 +18,8 @@ export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
     return new Observable((subscriber) => {
       const docRef = this.firestore.doc(path);
       docRef.onSnapshot({
-        complete: () => {
-          console.log('complete');
-        },
         error: () => {
-          console.log('error');
+          throw new Error("Could not initialize document subscriber");
         },
         next: (snapshot: DocumentSnapshot) => {
           this.zone.run(() => {

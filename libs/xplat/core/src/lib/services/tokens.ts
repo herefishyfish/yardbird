@@ -1,5 +1,5 @@
 import { InjectionToken, Type } from '@angular/core';
-import { IXPlatWindow } from '../models';
+import { IXPlatWindow, IYardBirdAuthentication } from '../models';
 
 /**
  * Various InjectionTokens shared across all platforms
@@ -12,3 +12,5 @@ export const PlatformLanguageToken = new InjectionToken<string>(
 export const PlatformWindowToken = new InjectionToken<IXPlatWindow>(
   'PlatformWindowToken'
 );
+
+export const AuthenticationToken = new InjectionToken<IYardBirdAuthentication>('AuthenticatioNToken');
