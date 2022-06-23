@@ -1,8 +1,8 @@
 
 <ng-container *rxLet="relatedItems$ as items; rxError: error; rxSuspense: suspense">
-  <div yrdCard *ngFor="let item of items">
-    <div style="max-width: 100%; height: 150px; background-repeat: no-repeat; background-size: cover;" [ngStyle]="{ background: 'url('+item.images[0]+')' }">
-      <!-- <img [src]="item.images[0]" style="object-fit: scale-down;"> -->
+  <div yrdCard *ngFor="let item of items" routerLink="../{{item.id}}">
+    <div style="height: 150px; width: 100%;">
+      <img [src]="item.images[0]" class="item-image">
     </div>
     <div class="card-content">
       {{ item.name }}
