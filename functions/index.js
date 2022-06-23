@@ -1,12 +1,12 @@
-import * as functions from 'firebase-functions';
-import * as admin from 'firebase-admin';
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 
 admin.initializeApp();
 
 const db = admin.firestore();
 
-export const createItem = functions.firestore
-  .document('items/{itemId}')
+exports.createItem = functions.firestore
+  .document("items/{itemId}")
   .onCreate((item, context) => {
     db.doc(`items/${item.id}`).set(
       {
