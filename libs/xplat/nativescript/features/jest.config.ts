@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'xplat-nativescript-scss',
+/* eslint-disable */
+export default {
+  displayName: 'xplat-nativescript-features',
   preset: '../../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../../coverage/libs/xplat/nativescript/scss',
+  coverageDirectory: '../../../../coverage/libs/xplat/nativescript/features',
 };

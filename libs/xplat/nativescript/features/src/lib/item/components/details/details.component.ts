@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DetailsBaseComponent, ItemService } from '@yardbird/xplat/features'
+import { DetailsBaseComponent } from '@yardbird/xplat/features'
 
 @Component({
   selector: 'yardbird-item-details',
@@ -7,7 +7,7 @@ import { DetailsBaseComponent, ItemService } from '@yardbird/xplat/features'
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent extends DetailsBaseComponent {
-  constructor(private _itemService: ItemService) {
-    super(_itemService);
+  constructor() {
+    super();
   }
 }

@@ -1,26 +1,20 @@
 {
-  "root": "libs/xplat/web/features",
+  "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "sourceRoot": "libs/xplat/web/features/src",
   "projectType": "library",
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/xplat/web/features/**/*.ts"
-        ]
+        "lintFilePatterns": ["libs/xplat/web/features/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/xplat/web/features"
-      ],
+      "outputs": ["coverage/libs/xplat/web/features"],
       "options": {
-        "jestConfig": "libs/xplat/web/features/jest.config.js",
+        "jestConfig": "libs/xplat/web/features/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -1,6 +1,6 @@
 {
+  "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "projectType": "application",
-  "root": "apps/nativescript-yardbird/",
   "sourceRoot": "apps/nativescript-yardbird/src",
   "prefix": "yardbird",
   "targets": {
@@ -70,7 +70,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "apps/nativescript-yardbird/jest.config.js",
+        "jestConfig": "apps/nativescript-yardbird/jest.config.ts",
         "tsConfig": "apps/nativescript-yardbird/tsconfig.spec.json",
         "passWithNoTests": true,
         "setupFile": "apps/nativescript-yardbird/src/test-setup.ts"

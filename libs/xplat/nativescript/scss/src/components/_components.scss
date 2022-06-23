@@ -1,7 +1,0 @@
-@use './button/button.theme' as button;
-@use './card/card.theme' as card;
-
-@mixin theme-components() {
-  @include button.button-theme();
-  @include card.card-theme();
-}

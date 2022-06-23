@@ -1,9 +1,8 @@
-@use 'components/components' as components;
+// @use 'components/components' as components;
 // shared across all platforms and apps
-@import '@yardbird/xplat-scss/index';
 
 
-@include components.theme-components();
+// @include components.theme-components();
 /**
  * The following are common styles for both iOS and Android (used with any {N} app targets)
  * for specific overrides: see the overrides.{ios,android}.scss
@@ -35,6 +34,8 @@
 // {N} styles (create/import other scss files or define as needed)
 @import 'fonts';
 @import 'tags';
+
+@import '@yardbird/xplat-scss/index';
 
 // since {N} core theme utilities are additive to any above class, these should always be last
 // includes (color, spacing, and text helpers): https://github.com/NativeScript/theme/tree/master/app/scss/utilities

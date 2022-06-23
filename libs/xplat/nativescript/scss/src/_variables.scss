@@ -1,4 +1,11 @@
 // for all {N} apps
 @import 'nativescript-theme-core/scss/variables';
 
-// Override any imported variables here...
+// Card
+$yb-card-padding: 14;
+$yb-card-border-radius: 4;
+
+// Button Style
+$yb-button-padding: 8 16;
+$yb-button-border-radius: 4;
+$yb-button-outlined-padding: 8 16;

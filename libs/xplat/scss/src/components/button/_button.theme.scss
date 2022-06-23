@@ -1,13 +1,21 @@
 @use './button-filled' as button-filled;
 @use './button-outline' as button-outline;
 
-@mixin button-theme() {
-  [ybButton] {
-    outline: 0;
-    border: 0;
-    font-weight: 600;
-  }
+[ybButton] {
+  outline: 0;
+  border: 0;
+  font-weight: 600;
+  border-radius: $yb-button-border-radius;
+  padding: $yb-button-padding;
 
-  @include button-filled.button-filled;
-  @include button-outline.button-outline;
+  transition: 125ms ease-in-out;
+  transition-property: background-color, color, border-color;
+
+  &.appearance-outline {
+    border-width: 1px;
+    padding: $yb-button-outlined-padding;
+  }
 }
+
+@include button-filled.button-filled;
+@include button-outline.button-outline;

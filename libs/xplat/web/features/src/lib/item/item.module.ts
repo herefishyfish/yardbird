@@ -3,13 +3,15 @@ import { RouterModule } from '@angular/router';
 import { LetModule } from '@rx-angular/template';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ITEM_DATA_SERVICE, ItemModule as SharedItemModule } from '@yardbird/xplat/features';
-import { UIModule } from '../ui/ui.module';
+// import { UIModule } from '../ui/ui.module';
 import { ItemComponent, ITEM_COMPONENTS } from './components';
 import { ItemDataService } from './services/data.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-    UIModule,
+    // UIModule,
+    CommonModule,
     SharedItemModule,
     LetModule,
     NgxSkeletonLoaderModule,

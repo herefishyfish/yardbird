@@ -1,0 +1,17 @@
+:host {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  justify-content: stretch;
+}
+
+[yrdCard] {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.item-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
