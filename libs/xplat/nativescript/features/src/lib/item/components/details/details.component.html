@@ -1,11 +1,10 @@
 <StackLayout ybCard>
   <ng-container *rxLet="item$ as item; rxError: error; rxSuspense: suspense">
-    <StackLayout>
+    <StackLayout class="card-content">
       <Label class="h3" text=" {{ item.name }}"></Label>
       <Label text="${{ item.value }}"></Label>
+      <Label text="{{ item.description }}"></Label>
     </StackLayout>
-    <Label text="{{ item.description }}"></Label>
-    <button ybButton focus nsRouterLink="../1234" text="Go to item 1234"></button>
   </ng-container>
 </StackLayout>
 

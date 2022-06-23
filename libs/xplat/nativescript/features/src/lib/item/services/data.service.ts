@@ -38,6 +38,7 @@ export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
         .collection('items')
         .where('category', '==', category)
         .where('id', '!=', id)
+        .orderBy('id')
         .orderBy('createdDTM')
         .limit(5);
 
