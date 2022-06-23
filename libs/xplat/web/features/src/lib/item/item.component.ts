@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { ItemBaseComponent, ItemService } from '@yardbird/xplat/features';
 
 @Component({
@@ -11,7 +10,7 @@ import { ItemBaseComponent, ItemService } from '@yardbird/xplat/features';
   ],
 })
 export class ItemComponent extends ItemBaseComponent {
-  constructor(private _router: Router) {
-    super(_router);
+  constructor() {
+    super();
   }
 }

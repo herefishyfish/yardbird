@@ -1,26 +1,28 @@
-<div yrdCard>
-  <ng-container *rxLet="item$ as item; rxError: error; rxSuspense: suspense">
-    <div>
-      <b>
-        {{ item.name }}
-      </b>
-      ${{ item.value }}
-    </div>
-    {{ item.description }}
-    <button routerLink="../12344">1234</button>
-  </ng-container>
+<div yrdCard >
+  <div class="card-content">
+    <ng-container *rxLet="item$ as item; rxError: error; rxSuspense: suspense">
+      <div>
+        <b>
+          {{ item.name }}
+        </b>
+        ${{ item.value }}
+      </div>
+      {{ item.description }}
+      <button routerLink="../12344">1234</button>
+    </ng-container>
+  </div>
 </div>
 
 <ng-template #error>
   Could not find item, this item may have been deleted.
 </ng-template>
 <ng-template #suspense>
-  <ngx-skeleton-loader
-    style="height: 2rem"
-    appearance="line"
-    [theme]="{
-      height: '50px'
-    }"
-  ></ngx-skeleton-loader>
-  <ngx-skeleton-loader count="5" appearance="line"></ngx-skeleton-loader>
+    <ngx-skeleton-loader
+      style="height: 2rem"
+      appearance="line"
+      [theme]="{
+        height: '50px'
+      }"
+    ></ngx-skeleton-loader>
+    <ngx-skeleton-loader count="5" appearance="line"></ngx-skeleton-loader>
 </ng-template>

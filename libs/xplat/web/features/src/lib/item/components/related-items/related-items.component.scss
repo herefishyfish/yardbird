@@ -1,0 +1,10 @@
+:host {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  justify-content: stretch;
+}
+
+[yrdCard] {
+  flex-grow: 1;
+}
