@@ -1,14 +1,12 @@
 {
+  "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "projectType": "application",
-  "root": "apps/web-yardbird",
   "sourceRoot": "apps/web-yardbird/src",
   "prefix": "yardbird",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/web-yardbird",
         "index": "apps/web-yardbird/src/index.html",
@@ -20,9 +18,7 @@
           "apps/web-yardbird/src/favicon.ico",
           "apps/web-yardbird/src/assets"
         ],
-        "styles": [
-          "apps/web-yardbird/src/styles.scss"
-        ],
+        "styles": ["apps/web-yardbird/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -87,11 +83,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/web-yardbird"
-      ],
+      "outputs": ["coverage/apps/web-yardbird"],
       "options": {
-        "jestConfig": "apps/web-yardbird/jest.config.js",
+        "jestConfig": "apps/web-yardbird/jest.config.ts",
         "passWithNoTests": true
       }
     },

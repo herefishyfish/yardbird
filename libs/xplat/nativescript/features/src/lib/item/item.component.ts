@@ -11,7 +11,7 @@ import { ItemBaseComponent, ItemService } from '@yardbird/xplat/features';
   ],
 })
 export class ItemComponent extends ItemBaseComponent {
-  constructor(private _router: Router) {
-    super(_router);
+  constructor() {
+    super();
   }
 }

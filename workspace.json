@@ -10,10 +10,11 @@
     "xplat-nativescript-features": "libs/xplat/nativescript/features",
     "xplat-nativescript-scss": "libs/xplat/nativescript/scss",
     "xplat-nativescript-utils": "libs/xplat/nativescript/utils",
+    "xplat-scss": "libs/xplat/scss",
+    "xplat-utils": "libs/xplat/utils",
     "xplat-web-core": "libs/xplat/web/core",
     "xplat-web-features": "libs/xplat/web/features",
-    "xplat-web-scss": "libs/xplat/web/scss",
-    "xplat-scss": "libs/xplat/scss",
-    "xplat-utils": "libs/xplat/utils"
-  }
+    "xplat-web-scss": "libs/xplat/web/scss"
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

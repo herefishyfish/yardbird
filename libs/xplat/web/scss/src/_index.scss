@@ -1,8 +1,7 @@
-@use 'components/components' as components;
+// @use 'components/components' as components;
 // shared across all platforms and apps
-@import '@yardbird/xplat-scss/index';
 
-@include components.theme-components();
+// @include components.theme-components();
 /**
  * The following are web specific (used with any web app targets)
  */
@@ -13,3 +12,6 @@
 // web styles (create/import other scss files or define as needed)
 @import 'spacing';
 @import 'tags';
+
+@import '@yardbird/xplat-scss/index';
+

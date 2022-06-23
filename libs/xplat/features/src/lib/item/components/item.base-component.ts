@@ -1,8 +1,10 @@
+import { inject } from "@angular/core";
 import { Router } from "@angular/router";
 
 export abstract class ItemBaseComponent {
+  #router = inject(Router);
 
-  constructor(private router: Router) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  constructor() {
+    this.#router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 }
