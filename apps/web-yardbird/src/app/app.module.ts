@@ -19,23 +19,27 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     SharedModule,
     RouterModule.forRoot([
       {
-        path: 'home',
+        path: '',
         loadChildren: () =>
           import('../features/home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'item/new',
+        loadChildren: () =>
+          import('@yardbird/xplat/web/features').then((m) => m.NewItemModule),
       },
       {
         path: 'item/:id',
         loadChildren: () =>
           import('@yardbird/xplat/web/features').then((m) => m.ItemModule),
       },
-      { path: '**', redirectTo: '/home', pathMatch: 'full' },
+      { path: '**', redirectTo: '', pathMatch: 'full' },
     ]),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
