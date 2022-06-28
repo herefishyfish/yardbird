@@ -15,6 +15,11 @@
     border-width: 1px;
     padding: $yb-button-outlined-padding;
   }
+
+  &:disabled {
+    background-color: gray;
+    color: white;
+  }
 }
 
 @include button-filled.button-filled;
