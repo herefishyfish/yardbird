@@ -1,4 +1,4 @@
-<StackLayout [formGroup]="form" *ngIf="form.controls">
+<StackLayout [formGroup]="form">
   <label text="Name"></label>
   <TextField #name type="text" formControlName="name"></TextField>
 
@@ -13,7 +13,7 @@
 
   <Button
     ybButton
-    info
+    success
     [isEnabled]="form.valid"
     (tap)="onSubmit()"
     text="Submit"

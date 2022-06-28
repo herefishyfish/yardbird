@@ -1,26 +1,25 @@
 import { Directive } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { BaseComponent } from '@yardbird/xplat/core';
-
-export interface IYardBirdItemForm {
-  name: FormControl<string | null>;
-  value: FormControl<number | null>;
-  description: FormControl<string | null>;
-  condition: FormControl<string | null>;
-  category: FormControl<string | null>;
-}
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { BaseComponent, IYardBirdBaseItem } from '@yardbird/xplat/core';
 
 @Directive()
 export abstract class NewItemBaseComponent extends BaseComponent {
-  form = new FormGroup<IYardBirdItemForm>({
-    name: new FormControl('', [Validators.required]),
-    value: new FormControl(null, [
+  form = new FormGroup<
+    Partial<{ [K in keyof IYardBirdBaseItem]: AbstractControl<any> }>
+  >({
+    name: new FormControl<string>('', [Validators.required]),
+    value: new FormControl<number | null>(null, [
       Validators.required,
       Validators.min(0),
     ]),
-    category: new FormControl(''),
-    condition: new FormControl('', [Validators.required]),
-    description: new FormControl('', [
+    category: new FormControl<string>(''),
+    condition: new FormControl<string>('', [Validators.required]),
+    description: new FormControl<string>('', [
       Validators.required,
       Validators.minLength(50),
     ]),
