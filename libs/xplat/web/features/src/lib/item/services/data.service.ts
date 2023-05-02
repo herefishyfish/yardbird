@@ -3,7 +3,7 @@ import { collectionData, doc, docData, Firestore } from '@angular/fire/firestore
 import { collection, CollectionReference, limit, orderBy, query, where } from '@firebase/firestore';
 import { IYardBirdBaseItem } from '@yardbird/xplat/core';
 import { IItemDataService } from '@yardbird/xplat/features';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable()
 export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
@@ -25,7 +25,6 @@ export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
 
   getRelatedDocuments({id, category}: IYardBirdBaseItem): Observable<IYardBirdBaseItem[]> {
     const collectionRef = collection(this.firestore, 'items');
-    console.log(id ?? '1234', category);
     return collectionData<IYardBirdBaseItem>(
       query<IYardBirdBaseItem>(collectionRef as CollectionReference<IYardBirdBaseItem>,
         where('id', '!=', id),
@@ -34,10 +33,6 @@ export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
         orderBy('createdDTM'),
         limit(5),
       )
-    ).pipe(
-      tap((i) => {
-        console.log(i);
-      })
-    )
+    );
   }
 }

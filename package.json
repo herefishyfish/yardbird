@@ -44,7 +44,7 @@
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.5.1",
-    "jest-preset-angular": "11.1.2",
+    "jest-preset-angular": "^12.2.3",
     "nx": "14.3.1",
     "prettier": "2.6.2",
     "sass": "^1.30.0",
