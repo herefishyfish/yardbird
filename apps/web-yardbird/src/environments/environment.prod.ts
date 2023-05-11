@@ -9,4 +9,5 @@ export const environment = {
     measurementId: 'G-F1E0ZM3GYQ',
   },
   production: true,
+  useEmulators: false,
 };

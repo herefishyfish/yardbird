@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="form.controls">
+  <div class="input">
+    <label for="name">Name</label>
+    <input #name type="text" formControlName="name">
+  </div>
+  <div class="input">
+    <label for="description">Description</label>
+    <textarea name="" #description type="text" cols="30" rows="10" formControlName="description"></textarea>
+  </div>
+  <div class="input">
+    <label for="condition">Condition</label>
+    <select #condition formControlName="condition">
+      <option value="new">New</option>
+      <option value="used">Used</option>
+    </select>
+  </div>
+  <div class="input">
+    <label for="value">Value</label>
+    <input #value type="number" formControlName="value">
+  </div>
+
+  <button ybButton success [disabled]="form.invalid" type="submit">Submit</button>
+</form>

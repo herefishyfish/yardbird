@@ -1,0 +1,21 @@
+<StackLayout [formGroup]="form">
+  <label text="Name"></label>
+  <TextField #name type="text" formControlName="name"></TextField>
+
+  <label text="Description"></label>
+  <TextView formControlName="description"></TextView>
+
+  <label text="Condition"></label>
+  <TextView formControlName="condition"></TextView>
+
+  <label text="Value"></label>
+  <TextField #value keyboardType="number" formControlName="value"></TextField>
+
+  <Button
+    ybButton
+    success
+    [isEnabled]="form.valid"
+    (tap)="onSubmit()"
+    text="Submit"
+  ></Button>
+</StackLayout>

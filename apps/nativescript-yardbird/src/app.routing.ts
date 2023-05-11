@@ -20,6 +20,11 @@ const routes: Routes = [
       import('./features/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'item/new',
+    loadChildren: () =>
+      import('@yardbird/xplat/nativescript/features').then((m) => m.NewItemModule),
+  },
+  {
     path: 'item/:id',
     loadChildren: () =>
       import('@yardbird/xplat/nativescript/features').then((m) => m.ItemModule),

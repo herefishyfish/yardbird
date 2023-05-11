@@ -1,4 +1,4 @@
-import { Directive, Input, HostBinding } from '@angular/core';
+import { Directive, Input, HostBinding, HostListener } from '@angular/core';
 import { BooleanInput, coerceBooleanProperty } from '@angular/cdk/coercion';
 
 import { BaseComponent } from '@yardbird/xplat/core';
@@ -64,6 +64,22 @@ export abstract class ButtonBaseComponent extends BaseComponent {
   get outline() {
     return this.appearance == 'outline';
   }
+
+  @HostListener('isEnabled', ['$event'])
+  @HostListener('disabled', ['$event'])
+  disable(value: boolean) {
+    console.log(value);
+    this.disabled = value;
+  }
+
+  @HostBinding('class.disabled')
+  public set disabled(value) {
+    this._disabled = value;
+  }
+  public get disabled() {
+    return this._disabled;
+  }
+  private _disabled = false;
 
   @Input()
   appearance: 'filled' | 'outline' = 'filled';
