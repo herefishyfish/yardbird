@@ -26,5 +26,4 @@ export class AuthenticationService implements IYardBirdAuthentication {
   registerUser(email: string, password: string): Promise<any> {
     throw new Error('Method not implemented.');
   }
-
 }

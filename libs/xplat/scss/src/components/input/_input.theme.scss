@@ -1,10 +1,9 @@
 TextView, TextField, textarea, input, select {
-  background-color: blue;
   border: 1px solid black;
   border-radius: 4px;
   padding: 8px;
 
   &.ng-invalid.ng-touched {
-    background-color: red;
+    border-color: red;
   }
 }

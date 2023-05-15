@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, inject } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -6,10 +6,14 @@ import {
   Validators,
 } from '@angular/forms';
 import { BaseComponent, IYardBirdBaseItem } from '@yardbird/xplat/core';
+import { NewItemService } from '../services';
+import { Router } from '@angular/router';
 
 @Directive()
 export abstract class NewItemBaseComponent extends BaseComponent {
-  form = new FormGroup<
+  protected newItemService = inject(NewItemService);
+  protected router = inject(Router);
+  protected form = new FormGroup<
     Partial<{ [K in keyof IYardBirdBaseItem]: AbstractControl<any> }>
   >({
     name: new FormControl<string>('', [Validators.required]),
@@ -25,11 +29,8 @@ export abstract class NewItemBaseComponent extends BaseComponent {
     ]),
   });
 
-  constructor() {
-    super();
-  }
-
-  onSubmit() {
-    console.log(this.form.getRawValue());
+  async onSubmit() {
+    const ref = await this.newItemService.saveItem(this.form.getRawValue());
+    this.router.navigate(['item', ref.id]);
   }
 }
