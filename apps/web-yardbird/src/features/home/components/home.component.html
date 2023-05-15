@@ -1,31 +1,19 @@
-<button ybButton routerLink="/item/123" appearance="outline" warning>
-  Warning
-</button>
-<button ybButton [disabled]="true" routerLink="/item/123123" appearance="outline" error>
-  Error
-</button>
-<button ybButton routerLink="/item/123" appearance="outline" info>
-  info
-</button>
-<button ybButton routerLink="/item/123" appearance="outline" focus>
-  Focus
-</button>
-<button ybButton routerLink="/item/123" appearance="outline" success>
-  Success
-</button>
-
-<button ybButton routerLink="/item/1234" warning>
-  Warning
-</button>
-<button ybButton routerLink="/item/123124" error>
-  Error
-</button>
-<button ybButton routerLink="/item/1234" info>
-  info
-</button>
-<button ybButton routerLink="/item/1234" focus>
-  Focus
-</button>
-<button ybButton routerLink="/item/1234" success>
-  Success
-</button>
+<div class="p-20">
+  <p class="h1 p-10">
+    {{ 'hello' | translate }}
+  </p>
+  <div ybCard class="content-card">
+    <Button
+      ybButton
+      info
+      appearance="filled"
+      routerLink="../item/123"
+    >View Item</Button>
+    <Button
+      ybButton
+      warning
+      appearance="filled"
+      routerLink="../item/new"
+    >New Item</Button>
+  </div>
+</div>
