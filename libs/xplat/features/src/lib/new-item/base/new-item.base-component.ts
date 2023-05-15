@@ -31,7 +31,6 @@ export abstract class NewItemBaseComponent extends BaseComponent {
 
   async onSubmit() {
     const ref = await this.newItemService.saveItem(this.form.getRawValue());
-    console.log('ref', ref);
     this.router.navigate(['item', ref.id]);
   }
 }
