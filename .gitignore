@@ -4,9 +4,13 @@
 /dist
 /tmp
 /out-tsc
+.firebase
 
 # dependencies
 /node_modules
+apps/nativescript-yardbird/App_Resources/Android/src/google-services.json
+apps/nativescript-yardbird/App_Resources/iOS/GoogleService-Info.plist
+apps/web-yardbird/src/environments
 
 # IDEs and editors
 /.idea
