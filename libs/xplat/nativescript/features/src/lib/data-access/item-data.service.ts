@@ -1,6 +1,6 @@
 import { Injectable, NgZone } from '@angular/core';
 import { firebase } from '@nativescript/firebase-core';
-import { DocumentSnapshot } from '@nativescript/firebase-firestore';
+import { DocumentSnapshot, SetOptions } from '@nativescript/firebase-firestore';
 import { IYardBirdBaseItem } from '@yardbird/xplat/core';
 import { IItemDataService } from '@yardbird/xplat/features';
 import { Observable } from 'rxjs';
@@ -53,5 +53,21 @@ export class ItemDataService implements IItemDataService<IYardBirdBaseItem> {
         },
       });
     });
+  }
+
+  async saveDocument(
+    document: Partial<IYardBirdBaseItem>
+  ): Promise<Partial<IYardBirdBaseItem>> {
+    let docRef;
+    if (!document.id) {
+      docRef = await this.firestore.collection('items').add(document);
+    } else {
+      docRef = this.firestore.doc(`items/${document.id}`);
+      docRef.set(document, {
+        merge: true,
+      } as unknown as SetOptions);
+    }
+
+    return docRef;
   }
 }

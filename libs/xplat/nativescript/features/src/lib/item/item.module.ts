@@ -4,7 +4,7 @@ import { LetModule } from '@rx-angular/template';
 import { ITEM_DATA_SERVICE, ItemModule as SharedItemModule } from '@yardbird/xplat/features';
 import { UIModule } from '../ui/ui.module';
 import { ItemComponent, ITEM_COMPONENTS } from './components';
-import { ItemDataService } from './services/data.service';
+import { ItemDataService } from '../data-access/item-data.service';
 
 @NgModule({
   imports: [
