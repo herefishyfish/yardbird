@@ -19,8 +19,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '../core/core.module';
 import { environment } from '../environments/environment';
 import { SharedModule } from '../features/shared/shared.module';
-import { ItemDataService } from 'libs/xplat/web/features/src/lib/data-access/item-data.service';
 import { ITEM_DATA_SERVICE } from '@yardbird/xplat/features';
+import { ItemDataService } from '@yardbird/xplat/web/features';
 
 let resolvePersistenceEnabled: (enabled: boolean) => void;
 
