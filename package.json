@@ -6,7 +6,10 @@
     "start": "nx serve",
     "build": "nx build web-yardbird",
     "test": "nx test",
-    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn"
+    "clean": "npx rimraf hooks node_modules package-lock.json yarn.lock && yarn",
+    "web": "nx serve web-yardbird",
+    "android": "nx run android-yardbird:android",
+    "ios": "nx run ios-yardbird:ios"
   },
   "private": true,
   "devDependencies": {

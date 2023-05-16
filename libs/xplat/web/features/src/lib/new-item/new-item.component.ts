@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NewItemBaseComponent } from '@yardbird/xplat/features';
-import { ButtonDirective } from '../../../ui/components/button/button.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
+import { ButtonDirective } from '../ui';
 
 @Component({
   selector: 'yrdbrd-new-item',

@@ -2,7 +2,7 @@
 <ng-container *rxLet="relatedItems$ as items; error: errorTemplate; suspense: suspenseTemplate">
   <div ybCard *ngFor="let item of items;" routerLink="../{{item.id}}">
     <div style="height: 150px; width: 100%;">
-      <img [src]="item.images[0]" class="item-image">
+      <img [src]="item?.images?.[0]" class="item-image">
     </div>
     <div class="card-content">
       {{ item.name }}
