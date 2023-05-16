@@ -35,7 +35,7 @@ export function createTranslateLoader() {
   imports: [
     NativeScriptModule,
     NativeScriptHttpClientModule,
-    TNSFontIconModule.forRoot({}),
+    // TNSFontIconModule.forRoot({}),
     CoreModule.forRoot([
       {
         provide: PlatformLanguageToken,

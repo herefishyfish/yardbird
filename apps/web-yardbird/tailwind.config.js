@@ -1,4 +1,4 @@
-const { createGlobPatternsForDependencies } = require('@nrwl/angular/tailwind');
+const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
 const { join } = require('path');
 const baseConfig = require('../../tailwind.config.base.js');
 const deepMerge = require('deepmerge');
@@ -9,8 +9,7 @@ const tailwindConfig = deepMerge(baseConfig, {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
 });

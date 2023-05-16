@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { LetModule } from '@rx-angular/template';
+import { LetModule } from '@rx-angular/template/let';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import {
   ITEM_DATA_SERVICE,
