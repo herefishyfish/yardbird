@@ -29,8 +29,14 @@ export abstract class NewItemBaseComponent extends BaseComponent {
     ]),
   });
 
-  async onSubmit() {
-    const ref = await this.newItemService.saveItem(this.form.getRawValue());
-    this.router.navigate(['item', ref.id]);
+  protected async saveItem() {
+    return await this.newItemService.saveItem(this.form.getRawValue());
+  }
+  protected async onSubmit(): Promise<void> {
+    const ref = await this.saveItem();
+    this.router.navigate(['item', ref.id], {
+      preserveFragment: false,
+      replaceUrl: true,
+    });
   }
 }
