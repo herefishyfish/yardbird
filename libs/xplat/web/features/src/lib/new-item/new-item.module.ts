@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ITEM_DATA_SERVICE, NewItemModule as SharedNewItemModule } from '@yardbird/xplat/features';
+import {
+  ITEM_DATA_SERVICE,
+  NewItemModule as SharedNewItemModule,
+} from '@yardbird/xplat/features';
 import { UIModule } from '../ui/ui.module';
 import { NewItemComponent, NEWITEM_COMPONENTS } from './components';
 import { ItemDataService } from '../data-access/item-data.service';
@@ -15,12 +18,14 @@ import { ItemDataService } from '../data-access/item-data.service';
         component: NewItemComponent,
       },
     ]),
+    ...NEWITEM_COMPONENTS,
   ],
-  providers: [    {
-    provide: ITEM_DATA_SERVICE,
-    useClass: ItemDataService,
-  }],
-  declarations: [...NEWITEM_COMPONENTS],
+  providers: [
+    {
+      provide: ITEM_DATA_SERVICE,
+      useClass: ItemDataService,
+    },
+  ],
   exports: [...NEWITEM_COMPONENTS],
 })
 export class NewItemModule {}
