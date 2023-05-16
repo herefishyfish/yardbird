@@ -3,6 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'orderByDate',
   pure: true,
+  standalone: true,
 })
 export class DateOrderPipe implements PipeTransform {
   transform(value: any[], sortBy: string): any {

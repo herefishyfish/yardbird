@@ -19,8 +19,8 @@ import { ItemDataService } from '../data-access/item-data.service';
     LetModule,
     NgxSkeletonLoaderModule,
     RouterModule.forChild([{ path: '', component: ItemComponent }]),
+    ...ITEM_COMPONENTS,
   ],
-  declarations: [...ITEM_COMPONENTS],
   exports: [...ITEM_COMPONENTS],
   providers: [
     {

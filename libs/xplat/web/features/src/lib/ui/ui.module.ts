@@ -16,8 +16,7 @@ const MODULES = [
 ];
 
 @NgModule({
-  imports: [...MODULES],
-  declarations: [...UI_COMPONENTS],
+  imports: [...MODULES, ...UI_COMPONENTS],
   exports: [...MODULES, ...UI_COMPONENTS],
 })
 export class UIModule {}
