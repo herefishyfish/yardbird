@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "@nativescript/core": "*",
-    "@nativescript/firebase-auth": "*",
-    "@nativescript/firebase-core": "*",
-    "@nativescript/firebase-firestore": "*",
-    "@nativescript/firebase-storage": "*",
-    "@nativescript/tailwind": "*"
+    "@nativescript/firebase-auth": "file:../../node_modules/@nativescript/firebase-auth",
+    "@nativescript/firebase-core": "file:../../node_modules/@nativescript/@nativescript/firebase-core",
+    "@nativescript/firebase-firestore": "file:../../node_modules/@nativescript/@nativescript/firebase-firestore",
+    "@nativescript/firebase-storage": "file:../../node_modules/@nativescript/@nativescript/firebase-storage",
   },
   "devDependencies": {
-    "@nativescript/android": "~8.2.2",
-    "@nativescript/ios": "~8.2.3"
+    "@nativescript/android": "~8.5.0",
+    "@nativescript/ios": "~8.5.0",
+    "@nativescript/tailwind": "file:../../node_modules/@nativescript/tailwind"
   }
 }

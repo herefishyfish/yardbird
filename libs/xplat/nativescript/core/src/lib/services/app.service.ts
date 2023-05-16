@@ -2,7 +2,7 @@
 import { Injectable, Inject, NgZone } from '@angular/core';
 
 // nativescript
-import { Device, isIOS, Application, Enums } from '@nativescript/core';
+import { Device, isIOS, Application, Enums, Utils } from '@nativescript/core';
 
 // libs
 import { TranslateService } from '@ngx-translate/core';
@@ -22,12 +22,12 @@ import { LogService, PlatformLanguageToken } from '@yardbird/xplat/core';
 })
 export class AppService {
   // fundamentals
-  private _appVersion: string;
+  private _appVersion!: string;
 
   // orientation helper
-  private _orientation: string;
+  private _orientation!: string;
   private _orientation$: Subject<any> = new Subject();
-  private _deviceType: 'Phone' | 'Tablet';
+  private _deviceType!: 'Phone' | 'Tablet';
 
   constructor(
     private _ngZone: NgZone,
@@ -65,8 +65,8 @@ export class AppService {
   }
 
   private _initAppVersion() {
-    let versionName: string;
-    let buildNumber: string;
+    let versionName: string = '';
+    let buildNumber: string = '';
 
     if (Application.android) {
       const pi = Application.android.context
@@ -112,7 +112,7 @@ export class AppService {
     this._log.debug('current orientation:', this.orientation);
 
     // handle orientation changes
-    Application.on(Application.orientationChangedEvent, (e) => {
+    Application.on(Application.orientationChangedEvent, (e: any) => {
       // sometimes e.newValue will be undefined, ignore those
       if (e.newValue && this.orientation !== e.newValue) {
         orientation = getOrientation();
@@ -144,7 +144,7 @@ const getOrientation = function () {
       return '';
     }
   } else {
-    const orientation = getContext()
+    const orientation = Utils.ad.getApplicationContext()
       .getResources()
       .getConfiguration().orientation;
     switch (orientation) {
@@ -157,16 +157,4 @@ const getOrientation = function () {
         return Enums.DeviceOrientation.portrait;
     }
   }
-};
-
-const getContext = function (): android.app.Application {
-  const ctx = java.lang.Class.forName('android.app.AppGlobals')
-    .getMethod('getInitialApplication', null)
-    .invoke(null, null);
-  if (ctx) {
-    return ctx;
-  }
-  return java.lang.Class.forName('android.app.ActivityThread')
-    .getMethod('currentApplication', null)
-    .invoke(null, null);
 };

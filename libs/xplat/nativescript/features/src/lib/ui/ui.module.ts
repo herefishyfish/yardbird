@@ -7,7 +7,7 @@ import {
 } from '@nativescript/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
+// import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { UISharedModule } from '@yardbird/xplat/features';
 import { UI_COMPONENTS } from './components';
 
@@ -16,7 +16,7 @@ const MODULES = [
   NativeScriptFormsModule,
   ReactiveFormsModule,
   NativeScriptRouterModule,
-  TNSFontIconModule,
+  // TNSFontIconModule,
   UISharedModule,
 ];
 

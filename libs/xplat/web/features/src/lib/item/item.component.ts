@@ -4,9 +4,9 @@ import { ItemBaseComponent, ItemService } from '@yardbird/xplat/features';
 @Component({
   templateUrl: './item.component.html',
   providers: [
-    // {
-    //   provide: ItemService,
-    // },
+    {
+      provide: ItemService,
+    },
   ],
 })
 export class ItemComponent extends ItemBaseComponent {
