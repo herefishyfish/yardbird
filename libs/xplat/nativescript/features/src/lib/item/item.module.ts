@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptRouterModule } from '@nativescript/angular';
-import { LetModule } from '@rx-angular/template';
+import { LetDirective } from '@rx-angular/template/let';
 import { ITEM_DATA_SERVICE, ItemModule as SharedItemModule } from '@yardbird/xplat/features';
 import { UIModule } from '../ui/ui.module';
 import { ItemComponent, ITEM_COMPONENTS } from './components';
@@ -10,7 +10,7 @@ import { ItemDataService } from '../data-access/item-data.service';
   imports: [
     UIModule,
     SharedItemModule,
-    LetModule,
+    LetDirective,
     NativeScriptRouterModule.forChild([{ path: '', component: ItemComponent }]),
   ],
   declarations: [...ITEM_COMPONENTS],

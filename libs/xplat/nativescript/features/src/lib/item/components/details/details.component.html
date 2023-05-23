@@ -1,5 +1,5 @@
 <StackLayout ybCard>
-  <ng-container *rxLet="item$ as item; rxError: error; rxSuspense: suspense">
+  <ng-container *rxLet="item$ as item; error: errorTemplate; suspense: suspenseTemplate">
     <StackLayout class="card-content">
       <Label class="h3" text=" {{ item.name }}"></Label>
       <Label text="${{ item.value }}"></Label>
@@ -8,9 +8,9 @@
   </ng-container>
 </StackLayout>
 
-<ng-template #error>
+<ng-template #errorTemplate>
   <Label text="Could not find item, this item may have been deleted."></Label>
 </ng-template>
-<ng-template #suspense>
+<ng-template #suspenseTemplate>
   <Label text="Loading..."></Label>
 </ng-template>

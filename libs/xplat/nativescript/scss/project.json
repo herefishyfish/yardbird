@@ -1,18 +1,19 @@
 {
+  "name": "xplat-nativescript-scss",
   "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "sourceRoot": "libs/xplat/nativescript/scss/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/xplat/nativescript/scss/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/xplat/nativescript/scss"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/xplat/nativescript/scss"],
       "options": {
         "jestConfig": "libs/xplat/nativescript/scss/jest.config.ts",
         "passWithNoTests": true

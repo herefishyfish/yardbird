@@ -19,6 +19,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from '../core/core.module';
 import { environment } from '../environments/environment';
 import { SharedModule } from '../features/shared/shared.module';
+import { ITEM_DATA_SERVICE } from '@yardbird/xplat/features';
+import { ItemDataService } from '@yardbird/xplat/web/features';
 
 let resolvePersistenceEnabled: (enabled: boolean) => void;
 
@@ -35,18 +37,22 @@ export const persistenceEnabled = new Promise<boolean>((resolve) => {
     RouterModule.forRoot([
       {
         path: '',
-        loadChildren: () =>
-          import('../features/home/home.module').then((m) => m.HomeModule),
+        loadComponent: () =>
+          import('../features/home/components/home.component').then(
+            (m) => m.HomeComponent
+          ),
       },
       {
         path: 'item/new',
-        loadChildren: () =>
-          import('@yardbird/xplat/web/features').then((m) => m.NewItemModule),
+        loadComponent: () =>
+          import('@yardbird/xplat/web/features').then(
+            (m) => m.NewItemComponent
+          ),
       },
       {
         path: 'item/:id',
-        loadChildren: () =>
-          import('@yardbird/xplat/web/features').then((m) => m.ItemModule),
+        loadComponent: () =>
+          import('@yardbird/xplat/web/features').then((m) => m.ItemComponent),
       },
       { path: '**', redirectTo: '', pathMatch: 'full' },
     ]),
@@ -78,6 +84,12 @@ export const persistenceEnabled = new Promise<boolean>((resolve) => {
       }
       return storage;
     }),
+  ],
+  providers: [
+    {
+      provide: ITEM_DATA_SERVICE,
+      useClass: ItemDataService,
+    }
   ],
   bootstrap: [AppComponent],
 })

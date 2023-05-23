@@ -16,4 +16,9 @@ export default {
   cli: {
     packageManager: 'npm',
   },
+  environmentVariablesHook: {
+    additionalPaths: [
+      'platforms/android/app/src/google-services.json'
+    ]
+  }
 } as NativeScriptConfig;

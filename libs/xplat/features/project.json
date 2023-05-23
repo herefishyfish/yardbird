@@ -1,18 +1,19 @@
 {
+  "name": "xplat-features",
   "$schema": "..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "sourceRoot": "libs/xplat/features/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/xplat/features/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/xplat/features"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/xplat/features"],
       "options": {
         "jestConfig": "libs/xplat/features/jest.config.ts",
         "passWithNoTests": true

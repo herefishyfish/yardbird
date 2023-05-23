@@ -1,18 +1,19 @@
 {
+  "name": "xplat-nativescript-features",
   "$schema": "..\\..\\..\\..\\node_modules\\nx\\schemas\\project-schema.json",
   "sourceRoot": "libs/xplat/nativescript/features/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/xplat/nativescript/features/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/xplat/nativescript/features"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/xplat/nativescript/features"],
       "options": {
         "jestConfig": "libs/xplat/nativescript/features/jest.config.ts",
         "passWithNoTests": true

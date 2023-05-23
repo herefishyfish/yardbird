@@ -1,8 +1,8 @@
 
-<ng-container *rxLet="relatedItems$ as items; rxError: error; rxSuspense: suspense">
-  <div ybCard *ngFor="let item of items" routerLink="../{{item.id}}">
+<ng-container *rxLet="relatedItems$ as items; error: errorTemplate; suspense: suspenseTemplate">
+  <div ybCard *ngFor="let item of items;" routerLink="../{{item.id}}">
     <div style="height: 150px; width: 100%;">
-      <img [src]="item.images[0]" class="item-image">
+      <img [src]="item?.images?.[0]" class="item-image">
     </div>
     <div class="card-content">
       {{ item.name }}
@@ -11,12 +11,12 @@
   </div>
 </ng-container>
 
-<ng-template #error>
+<ng-template #errorTemplate>
   <div ybCard *ngFor="let i of [].constructor(5)">
     Error
   </div>
 </ng-template>
-<ng-template #suspense>
+<ng-template #suspenseTemplate>
   <div ybCard *ngFor="let i of [].constructor(5)">
     <ngx-skeleton-loader
       appearance="line"

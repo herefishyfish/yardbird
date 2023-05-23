@@ -1,2 +1,1 @@
-export * from './components';
-export * from './new-item.module';
+export * from './new-item.component';

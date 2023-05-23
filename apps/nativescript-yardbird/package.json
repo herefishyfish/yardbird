@@ -11,11 +11,12 @@
     "@nativescript/firebase-auth": "*",
     "@nativescript/firebase-core": "*",
     "@nativescript/firebase-firestore": "*",
-    "@nativescript/firebase-storage": "*",
-    "@nativescript/tailwind": "*"
+    "@nativescript/firebase-storage": "*"
   },
   "devDependencies": {
-    "@nativescript/android": "~8.2.2",
-    "@nativescript/ios": "~8.2.3"
+    "@nativescript/android": "~8.5.0",
+    "@nativescript/ios": "~8.5.0",
+    "@nativescript/tailwind": "*",
+    "nativescript-environment-variables-hook": "^1.0.5"
   }
 }

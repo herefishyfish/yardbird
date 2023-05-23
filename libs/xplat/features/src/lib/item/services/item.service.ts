@@ -5,9 +5,7 @@ import {
   Observable,
   switchMap,
   map,
-  shareReplay,
   distinctUntilChanged,
-  skip,
 } from 'rxjs';
 import { IItemDataService, ITEM_DATA_SERVICE } from './data.types';
 
