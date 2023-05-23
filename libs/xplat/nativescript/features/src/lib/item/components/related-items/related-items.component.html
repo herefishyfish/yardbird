@@ -1,7 +1,7 @@
 <ScrollView orientation="horizontal">
   <StackLayout orientation="horizontal" padding="10 1" class="container">
     <ng-container
-      *rxLet="relatedItems$ as items; rxError: error; rxSuspense: suspense"
+      *rxLet="relatedItems$ as items; error: errorTemplate; suspense: suspenseTemplate"
     >
       <StackLayout
         ybCard
@@ -13,12 +13,12 @@
       </StackLayout>
     </ng-container>
 
-    <ng-template #error>
+    <ng-template #errorTemplate>
       <StackLayout ybCard *ngFor="let i of [].constructor(5)">
         Error
       </StackLayout>
     </ng-template>
-    <ng-template #suspense>
+    <ng-template #suspenseTemplate>
       <StackLayout ybCard *ngFor="let i of [].constructor(5)"></StackLayout>
     </ng-template>
   </StackLayout>
