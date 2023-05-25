@@ -8,4 +8,11 @@ export interface IItemDataService<T> {
   getRelatedDocuments(id: T): Observable<T[]>;
 }
 
-export const ITEM_DATA_SERVICE = new InjectionToken<IItemDataService<any>>('Unified Item Data Service');
+export interface IImageUploadService {
+  images$: Observable<number[]>;
+  uploadImages(images: File[]): void;
+  deleteImages(images: string[]): Promise<void>;
+}
+
+export const IMAGE_UPLOAD_SERVICE = new InjectionToken<IImageUploadService>('IMAGE_UPLOAD_SERVICE');
+export const ITEM_DATA_SERVICE = new InjectionToken<IItemDataService<any>>('ITEM_DATA_SERVICE');

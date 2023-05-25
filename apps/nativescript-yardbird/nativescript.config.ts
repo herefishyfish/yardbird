@@ -18,7 +18,8 @@ export default {
   },
   environmentVariablesHook: {
     additionalPaths: [
-      'platforms/android/app/src/google-services.json'
+      'platforms/android/app/src/google-services.json',
+      'platforms/ios/GoogleService-Info.plist',
     ]
   }
 } as NativeScriptConfig;
