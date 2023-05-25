@@ -56,7 +56,10 @@ export const persistenceEnabled = new Promise<boolean>((resolve) => {
       },
       { path: '**', redirectTo: '', pathMatch: 'full' },
     ]),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => {
+      const firebaseOptions = process.env?.['firebase'] ?? {};
+      return initializeApp(firebaseOptions);
+    }),
     provideAuth(() => {
       const auth = getAuth();
       if (environment.useEmulators) {
@@ -71,6 +74,7 @@ export const persistenceEnabled = new Promise<boolean>((resolve) => {
       if (environment.useEmulators) {
         connectFirestoreEmulator(firestore, 'localhost', 8080);
       }
+
       enableMultiTabIndexedDbPersistence(firestore).then(
         () => resolvePersistenceEnabled(true),
         () => resolvePersistenceEnabled(false)
@@ -89,7 +93,7 @@ export const persistenceEnabled = new Promise<boolean>((resolve) => {
     {
       provide: ITEM_DATA_SERVICE,
       useClass: ItemDataService,
-    }
+    },
   ],
   bootstrap: [AppComponent],
 })

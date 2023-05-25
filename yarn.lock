@@ -15,7 +15,20 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@angular-devkit/architect@0.1600.2":
+"@angular-builders/custom-webpack@16.0.0-beta.1":
+  version "16.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@angular-builders/custom-webpack/-/custom-webpack-16.0.0-beta.1.tgz#808f003e0709d3410e313d65e1ccfb9ad33bd57e"
+  integrity sha512-C0tpgKJt++ciJ2nXtP2+fHOgzHUNyk5Su7bgTKY3yWMWlC9YfUMOlXHvNnCRUDaLqxXTsxQjGp56o9hPNd5miA==
+  dependencies:
+    "@angular-devkit/architect" ">=0.1600.0 < 0.1700.0"
+    "@angular-devkit/build-angular" "^16.0.0"
+    "@angular-devkit/core" "^16.0.0"
+    lodash "^4.17.15"
+    ts-node "^10.0.0"
+    tsconfig-paths "^4.1.0"
+    webpack-merge "^5.7.3"
+
+"@angular-devkit/architect@0.1600.2", "@angular-devkit/architect@>=0.1600.0 < 0.1700.0":
   version "0.1600.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1600.2.tgz#26ba64209894e541a10c206ca8ed90709b7fa0d9"
   integrity sha512-2AOP3/dwLywcjkRr3ixR/lb0uBn1jzaMWwQR3o7ye3IuEA2sRtyWhUzsy6V7smKBKWPDIbXvX2TcqYZAJ87ccA==
@@ -31,7 +44,7 @@
     "@angular-devkit/core" "15.0.5"
     rxjs "6.6.7"
 
-"@angular-devkit/build-angular@~16.0.0":
+"@angular-devkit/build-angular@^16.0.0", "@angular-devkit/build-angular@~16.0.0":
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-16.0.2.tgz#4b471fea3180fe1e6d03f9afc77bf8a0c0a5f9c9"
   integrity sha512-jh6ez6k1tPmLTQ8J2T0CY+aRqLbhCvaExH6pqB7q6/bkDItcLPrybDGfJf05F0dHvZPB2fQEK0xYz9i92POofQ==
@@ -133,7 +146,7 @@
     rxjs "6.6.7"
     source-map "0.7.4"
 
-"@angular-devkit/core@16.0.2", "@angular-devkit/core@~16.0.0":
+"@angular-devkit/core@16.0.2", "@angular-devkit/core@^16.0.0", "@angular-devkit/core@~16.0.0":
   version "16.0.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-16.0.2.tgz#4f2081d733656413470480f815b8eb2a11003f76"
   integrity sha512-V4+t0BHO+QML9O2IiG2mJi8DtjeMOm4LAuG6tNDeiHZGAPOflvSPsKBtVl2JlXX/JxdLmyF4B6kRoAXRMKcwTg==
@@ -2537,27 +2550,27 @@
     eslint "~7.22.0"
     typescript "~4.2.3"
 
-"@nativescript/firebase-auth@^2.0.1":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@nativescript/firebase-auth/-/firebase-auth-2.5.2.tgz#0b50bcc479e2c345e65dfd2d1813e2a9d6e2b44c"
-  integrity sha512-MN7tR8qpYMLDU+ni/SsxTGXlcb14uEqhVXjt3f4HCkaJmctRYmpSzqCC5IuoNc9vL2Mg3RwTZ+/0K7FyNWnFqw==
+"@nativescript/firebase-auth@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@nativescript/firebase-auth/-/firebase-auth-3.1.0.tgz#75ac1b419583add3baf06a05af4d13679881b0d7"
+  integrity sha512-MtTLLTtLGnDk4GlScJ+e7n8oy/PrCV3hj9xfwYou/VmSLIrTUefpGT77nlUmShLKvwWzbtPcU12Qz0zKA8Qy8Q==
 
-"@nativescript/firebase-core@^2.0.1":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@nativescript/firebase-core/-/firebase-core-2.5.2.tgz#d7efc54aed8ce19c9318f7b94ea86bf372111c96"
-  integrity sha512-ezBGxCOXCJ4arbtj39KwXJMM5XvgPGWF2ldnxJ2hiwH8dhu2DVm3fPTzMy4AodtbbHnCkuzwZWiQuCT8QOGeXw==
+"@nativescript/firebase-core@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@nativescript/firebase-core/-/firebase-core-3.1.0.tgz#68905323ce1d7991936c3ee9ecf403e1d3eee79c"
+  integrity sha512-F77e1d7KqNIyNR9MYN/WGDjrkQ4091zlfMx6xpsLO9dvcrq9r6fkUyktaZLUqXnbYvMhCt9WiuCWKSuFfWLTDg==
 
-"@nativescript/firebase-firestore@^2.0.1":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@nativescript/firebase-firestore/-/firebase-firestore-2.5.2.tgz#d261566dc1804c38cfe1d224bce62ec96b0b0117"
-  integrity sha512-Hwm+snrQRU/EO7h6o5e4u4Uy6qEgjv1wbKXKHzEWw0+FQeEHlF6mh/Asg8HyclcvoZqIcFwL3Xdw1r25NNHymw==
+"@nativescript/firebase-firestore@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@nativescript/firebase-firestore/-/firebase-firestore-3.1.0.tgz#5dbd881ed351b5c2af13e6138eac51b1687436d9"
+  integrity sha512-pu4LW6S9MZMFguCpSv3OetWst80onDuextRorCVOq9p5jgHfkJzRc3xVUkL41iyAsChnBW+1/vT7NnXSebSISg==
 
-"@nativescript/firebase-storage@^2.0.1":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@nativescript/firebase-storage/-/firebase-storage-2.5.2.tgz#fd74c0bace9ca891d630bef4cf33bc20153f0268"
-  integrity sha512-6kIs8PPt+WgCV8L5KUipcTt9g01RCfO0VDiUe6s7atfDMyCO7rQTc1BeMFIKQMSo1sBxnjSit/fbUErqszLWhw==
+"@nativescript/firebase-storage@^3.0.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@nativescript/firebase-storage/-/firebase-storage-3.1.0.tgz#72c34a53faf81876c400a258af5afb10400fe65a"
+  integrity sha512-g+a8ismLDn67xPn4j4iUM+Jsm2p/1GiY0ajVKivPrJbQRdvrnfBZrB9PfYKr6BCn22WUAXz3SFFoGkd/N91KuQ==
 
-"@nativescript/hook@^2.0.0", "@nativescript/hook@~2.0.0":
+"@nativescript/hook@~2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@nativescript/hook/-/hook-2.0.0.tgz#dbc17777d08c657efc77e263dc1ba1896d9c77b5"
   integrity sha512-v3Hj3Zpd69sQJfFpDNXonV0EjO1a2OL4l48wlo1Ycsqk4r7RY822d/irFTjt0LllRG0OcdEGgfG6wKb0YgPyHw==
@@ -4588,11 +4601,6 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-app-root-path@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-3.1.0.tgz#5971a2fc12ba170369a7a1ef018c71e6e47c2e86"
-  integrity sha512-biN3PwB2gUtjaYy/isrU3aNWI5w+fAfvHkSvCKeQGxhmYpwKFUxudR3Yya+KqVRHBmEDYh+/lTozYCFbmzX4nA==
-
 "aproba@^1.0.3 || ^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
@@ -6149,15 +6157,15 @@ dotenv-webpack@^7.0.0:
   dependencies:
     dotenv-defaults "^2.0.2"
 
-dotenv@^10.0.0, dotenv@~10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
-  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
-
 dotenv@^8.2.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
+
+dotenv@~10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
 duplexer@^0.1.1, duplexer@^0.1.2:
   version "0.1.2"
@@ -7383,18 +7391,6 @@ handle-thing@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.1.tgz#857f79ce359580c340d43081cc648970d0bb234e"
   integrity sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==
-
-handlebars@^4.7.7:
-  version "4.7.7"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
-  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
-  dependencies:
-    minimist "^1.2.5"
-    neo-async "^2.6.0"
-    source-map "^0.6.1"
-    wordwrap "^1.0.0"
-  optionalDependencies:
-    uglify-js "^3.1.4"
 
 harmony-reflect@^1.4.6:
   version "1.6.2"
@@ -8952,7 +8948,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
 
-lodash@^4.17.14, lodash@^4.17.20, lodash@^4.17.21:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -9241,7 +9237,7 @@ minimatch@^9.0.0, minimatch@^9.0.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimist@^1.2.0, minimist@^1.2.5, minimist@^1.2.6:
+minimist@^1.2.0, minimist@^1.2.6:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
@@ -9399,16 +9395,6 @@ nanoid@^3.3.6:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
-nativescript-environment-variables-hook@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/nativescript-environment-variables-hook/-/nativescript-environment-variables-hook-1.0.5.tgz#d20a2dd848e50d83f8bfd2e79a2453fcf09cc6a8"
-  integrity sha512-xI8jC92ag8YoaquO0nqXfd+oqYj9W4NXGj4tf6KqFck/ZFvuQ93uA0NkFbTDyh3nkgpfDHNr4wle3jbSokwsUg==
-  dependencies:
-    "@nativescript/hook" "^2.0.0"
-    app-root-path "^3.0.0"
-    dotenv "^10.0.0"
-    handlebars "^4.7.7"
-
 nativescript-ngx-fonticon@~7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/nativescript-ngx-fonticon/-/nativescript-ngx-fonticon-7.0.0.tgz#fcb1eefd4c4cc7b4b866d7f61a70b52a27938868"
@@ -9445,7 +9431,7 @@ negotiator@0.6.3, negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-neo-async@^2.6.0, neo-async@^2.6.2:
+neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
@@ -11988,7 +11974,7 @@ ts-morph@10.0.2:
     "@ts-morph/common" "~0.9.0"
     code-block-writer "^10.1.1"
 
-ts-node@10.9.1:
+ts-node@10.9.1, ts-node@^10.0.0:
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.1.tgz#e73de9102958af9e1f0b168a6ff320e25adcff4b"
   integrity sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
@@ -12016,7 +12002,7 @@ tsconfig-paths-webpack-plugin@4.0.0:
     enhanced-resolve "^5.7.0"
     tsconfig-paths "^4.0.0"
 
-tsconfig-paths@^4.0.0, tsconfig-paths@^4.1.2:
+tsconfig-paths@^4.0.0, tsconfig-paths@^4.1.0, tsconfig-paths@^4.1.2:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-4.2.0.tgz#ef78e19039133446d244beac0fd6a1632e2d107c"
   integrity sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==
@@ -12129,11 +12115,6 @@ typescript@~4.2.3:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.2.4.tgz#8610b59747de028fda898a8aef0e103f156d0961"
   integrity sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==
-
-uglify-js@^3.1.4:
-  version "3.17.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.4.tgz#61678cf5fa3f5b7eb789bb345df29afb8257c22c"
-  integrity sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
@@ -12768,11 +12749,6 @@ word-wrap@^1.2.3, word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
-
-wordwrap@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
-  integrity sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
   version "7.0.0"

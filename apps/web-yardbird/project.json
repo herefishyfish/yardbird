@@ -6,9 +6,12 @@
   "prefix": "yardbird",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-builders/custom-webpack:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "customWebpackConfig": {
+          "path": "apps/web-yardbird/webpack.config.js"
+        },
         "outputPath": "dist/apps/web-yardbird",
         "index": "apps/web-yardbird/src/index.html",
         "main": "apps/web-yardbird/src/main.ts",
@@ -56,7 +59,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@angular-builders/custom-webpack:dev-server",
       "configurations": {
         "production": {
           "browserTarget": "web-yardbird:build:production"
