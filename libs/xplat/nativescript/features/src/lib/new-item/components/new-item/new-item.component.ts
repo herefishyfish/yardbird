@@ -4,13 +4,12 @@ import { NewItemBaseComponent } from '@yardbird/xplat/features';
 @Component({
   selector: 'yrdbrd-new-item',
   templateUrl: './new-item.component.html',
-  styles: [
-    `
-      StackLayout {
-        padding: 16;
-      }
-    `,
-  ],
+  styles: [`
+    TextField, TextView, Button {
+      margin: 6;
+    }
+  `],
+
 })
 export class NewItemComponent extends NewItemBaseComponent {
 }
